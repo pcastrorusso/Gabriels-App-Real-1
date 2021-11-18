@@ -1,0 +1,2 @@
+class Barista < ApplicationRecord
+end

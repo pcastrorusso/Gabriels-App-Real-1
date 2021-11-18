@@ -1,0 +1,15 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4"> <%= @gabriel.first_name %> <%= @gabriel.last_name %></h1>
+  <p class="lead"> <%= @gabriel.emails %> <br/> ------------------------ <br/> <%= @gabriel.phone %></p>
+  <hr class="my-4">
+  <p> <%= @gabriel.twitter %> </p>
+  <p class="lead">
+   <%= link_to 'Edit', edit_gabriel_path(@gabriel), class: "btn btn-dark" %> 
+<%= link_to 'Back', gabriels_path, class: "btn btn-dark" %>
+  </p>
+</div>
+
+
+

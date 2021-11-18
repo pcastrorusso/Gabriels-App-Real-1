@@ -1,0 +1,44 @@
+<% if user_signed_in? %>
+
+
+<h1>Gabriels List</h1>
+
+<table class="table table-hover table-dark table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Emails</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gabriels.each do |gabriel| %>
+    <% if gabriel.user == current_user%>
+      <tr>
+        <td><%= link_to gabriel.first_name + " " + gabriel.last_name , gabriel%></td>
+        <td><%= gabriel.emails %></td>
+        <td><%= gabriel.phone %></td>
+        <td><%= gabriel.twitter %></td>
+        <td><%= link_to 'Delete', gabriel_path(gabriel), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gabriel', new_gabriel_path, class: "btn btn-dark" %>
+
+<% else %>
+
+<h1>Main Page</h1>
+Gabriels<br/>
+Gabriels<br/>
+Gabriels<br/>
+And more Gabriels<br/>
+
+<% end %>

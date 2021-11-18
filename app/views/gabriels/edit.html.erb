@@ -1,0 +1,10 @@
+<h1>Editing Gabriel</h1>
+<br/>
+<%= render 'form', gabriel: @gabriel %> 
+<br/>
+<%= link_to 'Delete', @gabriel, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+<br/>
+<br/>
+<%= link_to 'Show', @gabriel, class: "btn btn-dark" %> 
+<%= link_to 'Back', gabriels_path, class: "btn btn-dark" %>
+
