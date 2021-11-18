@@ -19,7 +19,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
-group :production do
+group :production do 
 end
 
 group :development do
